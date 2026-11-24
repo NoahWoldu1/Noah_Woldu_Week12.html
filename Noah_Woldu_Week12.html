@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Week 12 - jQuery Basics</title>
+
+    <!-- Required jQuery Library -->
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"></script>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f5f9;
+            margin: 0;
+            padding: 40px 20px;
+            color: #26354a;
+        }
+
+        .container {
+            background-color: white;
+            max-width: 750px;
+            margin: 0 auto;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px #00000015;
+        }
+
+        h1 {
+            color: #173d69;
+            text-align: center;
+        }
+
+        h2 {
+            color: #173d69;
+            margin-top: 30px;
+        }
+
+        p {
+            font-size: 17px;
+            line-height: 1.6;
+        }
+
+        button {
+            background-color: #1769aa;
+            color: white;
+            border: none;
+            padding: 12px 18px;
+            margin: 5px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 15px;
+        }
+
+        button:hover {
+            background-color: #104c80;
+        }
+
+        input {
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #aaa;
+            border-radius: 6px;
+            margin: 5px;
+        }
+
+        #output {
+            margin-top: 15px;
+            padding: 12px;
+            min-height: 45px;
+            background-color: #eef4fb;
+            border-radius: 6px;
+        }
+
+        .highlight {
+            background-color: #fff1a8;
+            padding: 10px;
+            border-radius: 5px;
+            font-weight: bold;
+        }
+
+        li {
+            margin: 8px 0;
+        }
+
+        #status {
+            font-size: 13px;
+            color: #666;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Week 12 - jQuery Basics</h1>
+
+        <h2>Change Paragraph</h2>
+
+        <p id="textPara">
+            Welcome! Click the buttons below to
+            change this paragraph using jQuery.
+        </p>
+
+        <button id="btnChangeText" type="button">
+            Change Text
+        </button>
+
+        <button id="btnChangeColor" type="button">
+            Change Color
+        </button>
+
+        <h2>Personalized Greeting</h2>
+
+        <label for="inputName">Enter your name:</label>
+
+        <input
+            type="text"
+            id="inputName"
+            placeholder="Enter your name"
+        >
+
+        <button id="btnGreet" type="button">
+            Greet Me
+        </button>
+
+        <div id="output">
+            Your greeting will appear here.
+        </div>
+
+        <h2>Extra Challenges</h2>
+
+        <button id="btnTogglePara" type="button">
+            Hide Paragraph
+        </button>
+
+        <button id="btnAddItem" type="button">
+            Add List Item
+        </button>
+
+        <button id="btnToggleClass" type="button">
+            Toggle Highlight
+        </button>
+
+        <ul id="activityList">
+            <li>Practice jQuery selectors</li>
+            <li>Learn event handling</li>
+        </ul>
+
+        <p id="status">Checking JavaScript...</p>
+
+    </div>
+
+    <!-- Required separate JavaScript file -->
+    <script src="./script.js"></script>
+
+    <script>
+        // Display a message if jQuery fails to load.
+        window.addEventListener("load", function () {
+            if (typeof jQuery === "undefined") {
+                document.getElementById("status").textContent =
+                    "Error: jQuery did not load. Check your internet connection.";
+            }
+        });
+    </script>
+
+</body>
+</html>
